@@ -1,0 +1,55 @@
+<main>
+    <h1>Browser</h1>
+    <form action="" method="">
+      <input type="text" class="search" name="search" value="{{search}}" placeholder="Search...">
+      <input type="number" name="from" class="difficulty" value="{{from}}" placeholder="Difficulty from...">
+      <span>-</span>
+      <input type="number" name="to" class="difficulty" value="{{to}}" placeholder="Difficulty to...">
+      <input type="submit" value="search" id="searchBtn">
+    </form>
+    {{!-- TODO search button --}}
+    {{!-- <label for="sort">Sort cubes by:</label>
+    <form name="sort" method="GET" action="/sort">
+    <select id="sortCriteria" name="select">
+      <option value="">--Select sorting criteria--</option>
+      <option value="name">by Name</option>
+      <option value="difficultyLevel">by Difficulty level</option>
+      <option value="id">by ID</option>
+    </select>
+    <select id="sortType">
+      <option value="asc">ascending</option>
+      <option value="desc">descending</option>
+    </select>
+    </form>
+    <script type="text/javascript">
+      document.querySelector('#sortCriteria').addEventListener('change',sortHandler);
+      document.querySelector('#sortType').addEventListener('change',sortHandler);
+      function sortHandler(e){
+        const criteria = e.target;
+        const type = e.target.nextElementSibling;
+        if(criteria && type){
+            criteria.selectedOptions[0].setAttribute('selected','selected');
+            type.selectedOptions[0].setAttribute('selected','selected');
+        const data = {criteria:criteria.value,type:type.value}
+        const obj = {
+        headers:{
+          'Content-type':'application/json'
+        },
+        cors:'no-cors',
+        "method": 'POST',
+        "body": JSON.stringify(data)}
+          return fetch('http://localhost:3000/sort',obj).then(()=> {
+            location.reload(true);
+          });
+        }
+      };
+    </script> --}}
+    {{#each cubes}}
+    <div class="cube">
+      <img class="cube" src="{{imageUrl}}">
+      <p class="name">{{name}}</p>
+      <p><span>Difficulty level:</span> {{difficultyLevel}}</p>
+      <a class="btn" href="/details/{{_id}}">Details</a>
+    </div>
+    {{/each}}
+  </main>

@@ -1,0 +1,50 @@
+ <main>
+   <h1>{{cube.name}}</h1>
+   <img class="cube" src="{{cube.imageUrl}}">
+   <div class="details">
+     {{#if edit}}
+     <form action="/edit/{{cube.id}}" method="POST">
+       <p> 
+         <label for="name">Name:</label>
+         <input name="name" value="{{cube.name}}">
+       </p>
+       <p>
+         <label for="description">Description:</label>
+         <input name="description" value="{{cube.description}}">
+       </p>
+       <p>
+         <label for="difficultyLevel">Difficulty Level:</label>
+         <input name="difficultyLevel" value="{{cube.difficultyLevel}}">
+       </p>
+       <p>
+         <label for="imageUrl">Image URL:</label>
+         <input name="imageUrl" value="{{cube.imageUrl}}">
+       </p>
+       <button type="submit">Submit changes</button>
+     </form>
+     {{else}}
+       <p><span>Description:</span> {{cube.description}}</p>
+       <p><span>Difficulty level:</span> {{cube.difficultyLevel}}</p>
+     {{/if}}
+        <a class="btn" href="/delete/{{cube.id}}">Delete Cube</a>
+      {{#unless edit}}
+        <a class="btn" href="/edit/{{cube.id}}">Edit Cube</a>
+     {{/unless}}
+     <a class="btn" href="/">Back</a>
+   </div>
+   <h2>Accessories</h2>
+         <div class="accessories">
+           {{#each cube.accessories}}
+             <div class="accessory">
+                 <img src="{{imageUrl}}" alt="stickerName">
+                 <h3>{{name}}</h3>
+                 <p>{{description}}</p>
+             </div>
+             {{else}}
+             <h3 class="italic">This cube has no accessories yet...</h3>
+             {{/each}}
+             <div>
+               <a href="/attach/accessory/{{cube._id}}" style="color: black">Add accessory</a>
+             </div>
+         </div>
+ </main>

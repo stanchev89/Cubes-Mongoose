@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Blue Cube",
+    "difficultyLevel": 1,
+    "imageUrl": "data:image/png;base64,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",
+    "description": "no description",
+    "id": 6
+  },
+  {
+    "id": 2,
+    "imageUrl": "https://thingsidesire.com/wp-content/uploads/2018/06/Eco-Dark-Rubik%E2%80%99s-Cube2.jpg",
+    "difficultyLevel": "6",
+    "description": "Eco-Dark has no description",
+    "name": "Eco-Dark"
+  },
+  {
+    "id": 1,
+    "imageUrl": "https://ae01.alicdn.com/kf/HTB1CSddXRxRMKJjy0Fdq6yifFXa6/Gan-356-Air-SM-3x3-Black-Magic-cube-GAN-Air-SM-Magnetic-3x3x3-Speed-cube-gans.jpg",
+    "difficultyLevel": 3,
+    "description": "Gan356 Air SM has no description",
+    "name": "Gan356 Air SM"
+  },
+  {
+    "id": 3,
+    "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61izOzq%2BBAL._SY355_.jpg",
+    "difficultyLevel": 3,
+    "description": "Gan356 Air SM has no description",
+    "name": "Gan356 Air SM"
+  },
+  {
+    "id": 4,
+    "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/61HpQqVQ37L._SY355_.jpg",
+    "difficultyLevel": 3,
+    "description": "Megaminx has no description",
+    "name": "Megaminx"
+  },
+  {
+    "name": "The Black Cube",
+    "difficultyLevel": 2,
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRiTbWhDQ5FYDpkJaON95Pr-QfQ4TKv0udy8Q&usqp=CAU",
+    "description": "No description",
+    "id": 7
+  },
+  {
+    "name": "Easy cube",
+    "description": "3 colors",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRnW1qkITeemzKo1ApdToOlmltDTf2IK-EL8g&usqp=CAU",
+    "difficultyLevel": 1,
+    "id": 8
+  }
+]
